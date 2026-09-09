@@ -1,7 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState, useEffect } from "react";
 
-import heroImage from "@/assets/All Momo Items Of Aaradhya Momo Center.webp";
+import heroImage1 from "@/assets/All Momo Items Of Aaradhya Momo Center.webp";
+import heroImage2 from "@/assets/Momos Of Aaradhya Momo Center.webp";
 import stallImage from "@/assets/Stall Of Aaradhya Momo Center.webp";
+
+const heroImages = [
+  { src: heroImage1, alt: "All momo items of 'Aaradhya Momo Center' are presented together." },
+  {
+    src: heroImage2,
+    alt: "All the momo dishes from 'Aaradhya Momo Center' are presented together.",
+  },
+];
 
 const WHATSAPP = "https://wa.me/919804115797";
 const wa = (text: string) => `${WHATSAPP}?text=${encodeURIComponent(text)}`;
@@ -131,6 +141,15 @@ const jsonLd = {
 };
 
 function Index() {
+  const [activeIdx, setActiveIdx] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveIdx((prev) => (prev + 1) % heroImages.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-background font-body text-cream">
       <script
@@ -193,13 +212,20 @@ function Index() {
 
         <div className="rise-in relative [animation-delay:120ms]">
           <div className="relative overflow-hidden rounded-[28px] bg-surface ring-1 ring-white/10">
-            <img
-              src={heroImage}
-              alt="Steamed momos in a bamboo basket with steam rising, lit by warm evening light"
-              width={1200}
-              height={1008}
-              className="aspect-6/5 w-full object-cover"
-            />
+            <div className="relative aspect-6/5 w-full">
+              {heroImages.map((img, i) => (
+                <img
+                  key={img.src}
+                  src={img.src}
+                  alt={img.alt}
+                  width={1200}
+                  height={1008}
+                  className={`absolute inset-0 size-full object-cover transition-opacity duration-700 ease-in-out ${
+                    i === activeIdx ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+              ))}
+            </div>
             <div className="pointer-events-none absolute inset-0">
               <span className="steam-wisp left-[42%]" />
               <span className="steam-wisp left-[52%] h-45 [animation-delay:1.6s]" />
