@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import heroImage from "@/assets/momo-hero.jpg";
-import stallImage from "@/assets/stall-evening.jpg";
+import heroImage from "@/assets/All Momo Items Of Aaradhya Momo Center.webp";
+import stallImage from "@/assets/Stall Of Aaradhya Momo Center.webp";
 
 const WHATSAPP = "https://wa.me/919804115797";
 const wa = (text: string) => `${WHATSAPP}?text=${encodeURIComponent(text)}`;
