@@ -8,7 +8,7 @@ const wa = (text: string) => `${WHATSAPP}?text=${encodeURIComponent(text)}`;
 
 const TITLE = "Aaradhya Momo Center — Hot Momos In Bansberia!";
 const DESCRIPTION =
-  "Fresh steamed, fried, kurkure and gondhoraj momos in Bansberia (Hooghly)! Open daily 6:00–10:30 PM. Order on WhatsApp: +91 98041 15797.";
+  "Fresh steamed, fried, kurkure and gondhoraj momos in Bansberia (Hooghly)! Open daily 6 PM – 10 PM. Order on WhatsApp: (+91) 9804115797.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -34,55 +34,55 @@ type MenuItem = {
 const MENU: MenuItem[] = [
   {
     bn: "চিকেন স্টিম মোমো",
-    en: "Chicken Steam Momo",
-    price: 90,
+    en: "Chicken Steam Momo (6 Pieces)",
+    price: 60,
     note: "Juicy minced chicken, black pepper, coriander. The classic that starts most plates.",
   },
   {
     bn: "ভেজ স্টিম মোমো",
-    en: "Veg Steam Momo",
-    price: 70,
+    en: "Veg Steam Momo (6 Pieces)",
+    price: 50,
     note: "Cabbage, carrot, potato and green chilli — light, fragrant, and always fresh.",
   },
   {
     bn: "ফ্রাইড মোমো",
-    en: "Fried Momo",
-    price: 80,
+    en: "Fried Momo (5 Pieces)",
+    price: 70,
     note: "Golden, crisp edges over a soft centre. Dips best with our fiery red chutney.",
   },
   {
     bn: "কুরকুরে মোমো",
-    en: "Kurkure Momo",
+    en: "Kurkure Momo (6 Pieces)",
     price: 95,
     note: "Crumbed in a crunchy spice shell for a satisfying crackle with every bite.",
   },
   {
     bn: "গন্ধরাজ মোমো",
-    en: "Gondhoraj Momo",
-    price: 110,
+    en: "Gondhoraj Momo (6 Pieces)",
+    price: 70,
     note: "Gondhoraj lemon and green chilli — sharp, citrusy, a Bengali evening favourite.",
   },
   {
     bn: "গ্রেভি মোমো",
-    en: "Gravy Momo",
+    en: "Gravy Momo (5 Pieces)",
     price: 100,
     note: "Steamed then simmered in a rich onion-tomato gravy. Dip, or don't.",
   },
   {
     bn: "আফগানি মালাই মোমো",
-    en: "Afghani Malai Momo",
+    en: "Afghani Malai Momo (5 Pieces)",
     price: 120,
     note: "Creamy malai filling with a garlic masala gravy — indulgent and slow to sell out.",
   },
   {
     bn: "চিকেন চিজ মোমো",
-    en: "Chicken Cheese Momo",
-    price: 115,
+    en: "Chicken Cheese Momo (6 Pieces)",
+    price: 90,
     note: "Cheese that stretches when you bite. The one kids ask for by name.",
   },
   {
     bn: "প্যান ফ্রাইড মোমো",
-    en: "Pan Fried Momo",
+    en: "Pan Fried Momo (6 Pieces)",
     price: 95,
     note: "Crisp on the base, soft on top, finished with sesame and spring onion.",
   },
@@ -169,7 +169,7 @@ function Index() {
             HOT MOMOS,
             <br />
             <span className="text-flame">STEAM RISING!</span>
-            <br />6 PM — 10:30 PM.
+            <br />6 PM — 10 PM.
           </h1>
           <p className="mt-6 max-w-[44ch] leading-relaxed text-muted-foreground text-pretty">
             Fresh momos straight off the burner every evening opposite 'Panchanantola Park' in
@@ -293,7 +293,7 @@ function Index() {
             </p>
           </div>
           <div className="rise-in rounded-2xl border border-border bg-surface p-6 [animation-delay:120ms]">
-            <p className="font-display text-5xl leading-none text-flame">6 – 10:30 PM</p>
+            <p className="font-display text-5xl leading-none text-flame">6 PM – 10 PM</p>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
               Open every single evening, rain or shine. Come hungry, leave happy.
             </p>
@@ -328,7 +328,7 @@ function Index() {
               <span className="block text-[11px] uppercase tracking-wider text-muted-foreground">
                 Every Day:
               </span>
-              <span className="font-semibold text-cream">6:00 PM – 10:30 PM</span>
+              <span className="font-semibold text-cream">6:00 PM – 10:00 PM</span>
             </div>
             <div>
               <span className="block text-[11px] uppercase tracking-wider text-muted-foreground">
